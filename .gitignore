@@ -1,0 +1,42 @@
+# Quartus / FPGA build artifacts
+db/
+incremental_db/
+*_db/
+*.rpt
+*.summary
+*.done
+*.pin
+*.jdi
+*.sof
+*.pof
+*.qws
+*.bak
+*.orig
+*.qdf
+*.map
+*.fit
+*.sta
+*.asm
+*.smsg
+*.cmp
+*.htm
+*.html
+*.qar
+*.qarlog
+*.zip
+
+# Simulation
+*.wlf
+*.vcd
+*.sft
+transcript
+work/
+vsim.wlf
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
