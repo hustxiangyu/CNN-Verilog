@@ -22,7 +22,7 @@
 
 module fc#(
 	parameter BITWIDTH	 = 11	,
-    parameter WEIGHT_NUM = 9 	,			//Ò»¸öpool²ãÊä³öµÄÊý¾ÝÁ¿
+    parameter WEIGHT_NUM = 9 	,			//Ò»ï¿½ï¿½poolï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     parameter CLASEE_NUM = 3    ,
     parameter BIAS_NUM 	 = 10 	
 )
@@ -85,7 +85,6 @@ assign compare_flag_fc = compare_flag;
    $readmemb("parameter/weight49.txt", weight9);   
    $readmemb("parameter/weight40.txt", weight10);   
    $readmemb("parameter/bias.txt", bias);
-   //$readmemb("C:/Users/30391/Desktop/jcs/workspace/cnn_sm/cnn_sm.srcs/sources_1/cnn/parameter/bias.txt", bias);
  end
  reg compare_flag_1;
  reg compare_flag_2;
@@ -115,7 +114,7 @@ always @(posedge clk or negedge rst_n) begin
         output_en_fc <= 1'b0;
 		result <= 4'b0;
 		max <= 1'b0;
-    end else if(en1 == 1'b1 && en2 == 1'b1 && en3 == 1'b1 && compare_flag == 1'b0) begin  // È·±£ compare_flag µÍÊ±½øÐÐ¼ÆËã
+    end else if(en1 == 1'b1 && en2 == 1'b1 && en3 == 1'b1 && compare_flag == 1'b0) begin  // È·ï¿½ï¿½ compare_flag ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½
         if(weight_cnt == WEIGHT_NUM -1) begin
             weight_cnt <= 1'b0;
             compare_flag <= 1'b1;
